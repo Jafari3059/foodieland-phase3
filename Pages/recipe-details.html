@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodieland | Recipe Details</title>
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="stylesheet" href="../Styles/recipe.css">
+    <link rel="stylesheet" href="../Styles/responsive.css">
+</head>
+
+<body>
+
+    <!-- HEADER (مشترک) -->
+    <header>
+        <div class="logo">
+            <img src="../images/Foodieland..png" alt="Foodieland">
+        </div>
+
+        <nav id="navMenu">
+            <a href="#">Home</a>
+            <a href="#">Recipes</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">About us</a>
+            <div class="social-icons nav-social">
+                <img src="../images/001-facebook.svg" alt="Facebook">
+                <img src="../images/003-twitter.svg" alt="Twitter">
+                <img src="../images/004-instagram.svg" alt="Instagram">
+            </div>
+        </nav>
+
+        <div class="hamburger" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="social-icons main-social">
+            <img src="../images/001-facebook.svg" alt="Facebook">
+            <img src="../images/003-twitter.svg" alt="Twitter">
+            <img src="../images/004-instagram.svg" alt="Instagram">
+        </div>
+    </header>
+
+    <div class="container">
+
+        <main>
+            <!-- بخش عنوان  -->
+            <section class="recipe-header">
+                <h1>Healthy Japanese Fried Rice</h1>
+            </section>
+
+            <section class="recipe-info-bar">
+                <!-- نویسنده -->
+                <div class="recipe-author-info">
+                    <div class="author-avatar-small" style="background-image: url('../images/Ellipse.svg');"></div>
+                    <div class="author-details">
+                        <span class="author-name">John Smith</span>
+                        <span class="recipe-date">15 March 2022</span>
+                    </div>
+                </div>
+
+                <!-- خط جداکننده بین نویسنده و اطلاعات -->
+                <div class="info-separator"></div>
+
+                <!-- اطلاعات غذایی -->
+                <div class="info-items">
+                    <div class="info-item">
+                        <img src="../images/Timer.svg" alt="timer" class="info-icon">
+                        <div>
+                            <span class="info-label">PREP TIME</span>
+                            <span class="info-value">15 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="info-item-separator"></div>
+                    <div class="info-item">
+                        <img src="../images/Timer.svg" alt="cook" class="info-icon">
+                        <div>
+                            <span class="info-label">COOK TIME</span>
+                            <span class="info-value">15 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="info-item-separator"></div>
+                    <div class="info-item">
+                        <img src="../images/ForkKnife.svg" alt="chicken" class="info-icon">
+                        <div>
+                            <span class="info-label">CHICKEN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دکمه‌ها -->
+                <div class="recipe-actions">
+                    <button class="action-circle print">
+                        <img src="../images/printer.svg" alt="print">
+                    </button>
+                    <button class="action-circle share">
+                        <img src="../images/share.svg" alt="share">
+                    </button>
+                </div>
+
+            </section>
+
+            <!--  بخش Nutrition Information + عکس  -->
+            <div class="nutrition-wrapper">
+                <div class="nutrition-image">
+                    <img src="../images/Group 13937.png" alt="Healthy Japanese Fried Rice">
+                </div>
+                <div class="nutrition-box">
+                    <div class="nutrition-content">
+                        <h2>Nutrition Information</h2>
+                        <div class="nutrition-grid">
+                            <div class="nutrition-row">
+                                <span class="nutrition-label">Calories</span>
+                                <span class="nutrition-value" id="cal"></span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span class="nutrition-label">Total Fat</span>
+                                <span class="nutrition-value" id="fat"></span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span class="nutrition-label">Protein</span>
+                                <span class="nutrition-value" id="pro"></span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span class="nutrition-label">Carbohydrate</span>
+                                <span class="nutrition-value" id="carb"></span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span class="nutrition-label">Cholesterol</span>
+                                <span class="nutrition-value" id="chol"></span>
+                            </div>
+                        </div>
+                        <p class="nutrition-footer-text" id="desc"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--  بخش توضیحات اضافی  -->
+            <section class="recipe-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+
+            <!--  بخش Ingredients + Directions + Tasty Recipes (دو ستونه) -->
+            <div class="recipe-two-columns">
+
+                <!-- ستون چپ: Ingredients + Directions -->
+                <div class="left-column">
+
+                    <!-- Ingredients -->
+                    <div class="ingredients-box">
+                        <h2>Ingredients</h2>
+                        <div class="ingredients-categories">
+                            <div class="ingredient-category">
+                                <h3>For main dish</h3>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                            </div>
+                            <div class="ingredient-category">
+                                <h3>For the sauce</h3>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                                <label class="ingredient-item">
+                                    <input type="checkbox"> Lorem ipsum dolor sit amet
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Directions -->
+                    <div class="directions-section-full">
+                        <h2>Directions</h2>
+                        <div class="directions-list">
+                            <div class="direction-item">
+                                <div class="direction-header">
+                                    <input type="checkbox" class="direction-checkbox">
+                                    <span class="step-number">1.</span>
+                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                </div>
+                                <div class="direction-description">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                                        quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                        porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                        magnam aliquam quaerat voluptatem.</p>
+                                </div>
+                                <div class="direction-image">
+                                    <img src="../images/Rectangle 23.png" alt="Step 1">
+                                    <p class="image-caption">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                                        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                                        sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                                        labore et dolore magnam aliquam quaerat voluptatem.</p>
+
+                                </div>
+                            </div>
+                            <div class="direction-item">
+                                <div class="direction-header">
+                                    <input type="checkbox" class="direction-checkbox">
+                                    <span class="step-number">2.</span>
+                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                </div>
+                                <div class="direction-description">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                                        quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                        porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                        magnam aliquam quaerat voluptatem.</p>
+                                </div>
+                                <div class="direction-image"></div>
+                            </div>
+                            <div class="direction-item">
+                                <div class="direction-header">
+                                    <input type="checkbox" class="direction-checkbox">
+                                    <span class="step-number">3.</span>
+                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                </div>
+                                <div class="direction-description">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                                        quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                        porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                        magnam aliquam quaerat voluptatem.</p>
+                                </div>
+                                <div class="direction-image"></div>
+                            </div>
+                            <div class="direction-item">
+                                <div class="direction-header">
+                                    <input type="checkbox" class="direction-checkbox">
+                                    <span class="step-number">4.</span>
+                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                </div>
+                                <div class="direction-description">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                                        quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                        porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                        magnam aliquam quaerat voluptatem.</p>
+                                </div>
+                                <div class="direction-image"></div>
+                            </div>
+                            <div class="direction-item">
+                                <div class="direction-header">
+                                    <input type="checkbox" class="direction-checkbox">
+                                    <span class="step-number">5.</span>
+                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                </div>
+                                <div class="direction-description">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                                        quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                        porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                        magnam aliquam quaerat voluptatem.</p>
+                                </div>
+                                <div class="direction-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- left-column -->
+
+                <!-- ستون راست: Tasty Recipes + پوستر -->
+                <div class="tasty-column-recipe">
+                    <div class="tasty-recipes-section">
+                        <div class="tasty-recipes-header">
+                            <h3>Other Recipes</h3>
+                        </div>
+                        <div class="tasty-recipes-list">
+                            <div class="tasty-recipe-item">
+                                <div class="tasty-recipe-img" style="background-image: url('../images/Mask6.png');">
+                                </div>
+                                <div class="tasty-recipe-info">
+                                    <h4>Chicken Meatballs with Cream Cheese</h4>
+                                    <p>By Andreas Paula</p>
+                                </div>
+                            </div>
+                            <div class="tasty-recipe-item">
+                                <div class="tasty-recipe-img" style="background-image: url('../images/Mask7.png');">
+                                </div>
+                                <div class="tasty-recipe-info">
+                                    <h4>Traditional Bolognese Ragu</h4>
+                                    <p>By Andreas Paula</p>
+                                </div>
+                            </div>
+                            <div class="tasty-recipe-item">
+                                <div class="tasty-recipe-img" style="background-image: url('../images/Mask8.png');">
+                                </div>
+                                <div class="tasty-recipe-info">
+                                    <h4>Pork and Chive Chinese Dumplings</h4>
+                                    <p>By Andreas Paula</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.foodieland.com" class="poster-banner" target="_blank">
+                        <div class="poster-banner-img" style="background-image: url('../images/Ads.png');"></div>
+                        <div class="poster-banner-content"></div>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (مشترک) -->
+        <footer class="footer">
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <h2>Deliciousness to your inbox</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqut enim ad minim</p>
+
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <input type="email" id="newsletterInput" placeholder="Your email address..."
+                            class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- بخش جدید دستورهای غذایی (مخصوص صفحه جزئیات) -->
+            <section class="new-recipes-section recipe-suggestions">
+                <div class="new-recipes-header">
+                    <div class="new-recipes-title">
+                        <h2>You may like these recipe too</h2>
+                    </div>
+                </div>
+
+                <div class="new-recipes-grid recipe-suggestions-grid">
+                    <!-- فقط 4 کارت (کارت 1 تا 4) -->
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(9\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852.svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+                        <div class="new-card-info">
+                            <h3>Mixed Tropical Fruit Salad with Superfood Boosts</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Healthy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(10\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852 (1).svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+                        <div class="new-card-info">
+                            <h3>Big and Juicy Wagyu Beef Cheeseburger</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Western</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(11\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852.svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+                        <div class="new-card-info">
+                            <h3>Healthy Japanese Fried Rice with Asparagus</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Healthy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(12\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852 (1).svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+
+                        <div class="new-card-info">
+                            <h3>Cauliflower Walnut Vegetarian Taco Meat</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Eastern</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="../images/Foodieland..png" alt="Foodieland" class="footer-logo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="#">Recipes</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                        <a href="#">About us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-left"></div>
+                <p>© 2020 Flowbase. Powered by <span class="highlight">Webflow</span></p>
+                <div class="footer-social">
+                    <img src="../images/001-facebook.svg" alt="Facebook">
+                    <img src="../images/003-twitter.svg" alt="Twitter">
+                    <img src="../images/004-instagram.svg" alt="Instagram">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="../Js/error-handler.js"></script>
+    <script src="../Js/main.js"></script>
+    <script src="../Js/recipe.js"></script>
+
+</body>
+
+</html>

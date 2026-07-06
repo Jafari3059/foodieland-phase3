@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodieland | Contact Us</title>
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="stylesheet" href="../Styles/contact.css">
+    <link rel="stylesheet" href="../Styles/responsive.css">
+</head>
+
+<body>
+
+    <!-- HEADER (مشترک) -->
+    <header>
+        <div class="logo">
+            <img src="../images/Foodieland..png" alt="Foodieland">
+        </div>
+
+        <nav id="navMenu">
+            <a href="#">Home</a>
+            <a href="#">Recipes</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">About us</a>
+            <div class="social-icons nav-social">
+                <img src="../images/001-facebook.svg" alt="Facebook">
+                <img src="../images/003-twitter.svg" alt="Twitter">
+                <img src="../images/004-instagram.svg" alt="Instagram">
+            </div>
+        </nav>
+
+        <div class="hamburger" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="social-icons main-social">
+            <img src="../images/001-facebook.svg" alt="Facebook">
+            <img src="../images/003-twitter.svg" alt="Twitter">
+            <img src="../images/004-instagram.svg" alt="Instagram">
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <!-- بخش عنوان -->
+            <section class="contact-header">
+                <h1>Contact us</h1>
+            </section>
+
+            <!-- عکس + فرم (دو ستونی) -->
+            <div class="contact-wrapper">
+                <!-- ستون چپ: عکس -->
+                <div class="contact-image">
+                    <img src="../images/Group 13936.svg" alt="chef">
+                </div>
+
+                <!-- ستون راست: فرم -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" novalidate>
+
+                        <!-- Name و Email -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">NAME</label>
+                                <input type="text" id="name" placeholder="Enter your name..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">EMAIL ADDRESS</label>
+                                <input type="email" id="email" placeholder="Your email address..." required>
+                            </div>
+                        </div>
+
+                        <!-- Subject و Enquiy Type -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject">SUBJECT</label>
+                                <input type="text" id="subject" placeholder="Enter subject..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="enquiry">ENQUIRY TYPE</label>
+                                <select id="enquiryType">
+                                    <option>Advertising</option>
+                                    <option>Collaboration</option>
+                                    <option>Support</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-row-full">
+                            <div class="form-group">
+                                <label for="message">MESSAGE</label>
+                                <textarea id="message" rows="6" placeholder="Enter your message..." required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (مشترک) -->
+        <footer class="footer">
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <h2>Deliciousness to your inbox</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqut enim ad minim</p>
+
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <input type="email" id="newsletterInput" placeholder="Your email address..."
+                            class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- بخش Check out the delicious recipe -->
+            <section class="new-recipes-section">
+                <div class="new-recipes-header">
+                    <div class="new-recipes-title">
+                        <h2>Check out the delicious recipe</h2>
+                    </div>
+                </div>
+
+                <div class="new-recipes-grid">
+
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(9\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852.svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+                        <div class="new-card-info">
+                            <h3>Mixed Tropical Fruit Salad with Superfood Biostats</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Healthy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(10\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852 (1).svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+                        <div class="new-card-info">
+                            <h3>Big and Juicy Wagyu Beef Cheeseburger</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Vegetarian</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(11\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852.svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+                        <div class="new-card-info">
+                            <h3>Healthy Japanese Fried Rice with Asparagus</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Healthy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-card">
+                        <div class="new-card-img" style="background-image: url('../images/Mask\ Group\ \(12\).png');">
+                            <div class="like-container">
+                                <img src="../images/Group 852 (1).svg" alt="like" class="heart-icon heart-empty">
+                                <img src="../images/Group 852.svg" alt="liked" class="heart-icon heart-filled">
+                            </div>
+                        </div>
+                        <div class="new-card-info">
+                            <h3>Cauliflower Walnut Vegetarian Taco Meat</h3>
+                            <div class="new-card-meta">
+                                <span><img src="../images/Timer.svg" alt="times">30 Minutes</span>
+                                <span><img src="../images/ForkKnife.svg" alt="foods">Eastern</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="../images/Foodieland..png" alt="Foodieland" class="footer-logo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="#">Recipes</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                        <a href="#">About us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-left"></div>
+                <p>© 2020 Flowbase. Powered by <span class="highlight">Webflow</span></p>
+                <div class="footer-social">
+                    <img src="../images/001-facebook.svg" alt="Facebook">
+                    <img src="../images/003-twitter.svg" alt="Twitter">
+                    <img src="../images/004-instagram.svg" alt="Instagram">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="../Js/error-handler.js"></script>
+    <script src="../Js/main.js"></script>
+    <script src="../Js/contact.js"></script>
+
+</body>
+
+</html>
