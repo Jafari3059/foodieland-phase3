@@ -1,0 +1,254 @@
+.contact-header {
+    text-align: center;
+    margin: clamp(40px, 8vw, 84px) 0 clamp(24px, 5vw, 46px) 0;
+    padding: 0 20px;
+}
+
+.contact-header h1 {
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 600;
+    margin-bottom: clamp(40px, 8vw, 80px);
+    line-height: 1.2;
+}
+
+/* عکس + فرم (دو ستونی) */
+.contact-wrapper {
+    display: flex;
+    gap: clamp(20px, 5vw, 40px);
+    margin: clamp(40px, 8vw, 80px) 0 clamp(80px, 15vw, 160px) 0;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* ستون چپ - عکس */
+.contact-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 300px;
+    max-height: 472px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* ستون راست - فرم */
+.contact-form-wrapper {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 4vw, 40px);
+}
+
+/* ردیف‌های دو ستونه */
+.form-row {
+    display: flex;
+    gap: clamp(16px, 3vw, 24px);
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-row-full {
+    width: 100%;
+}
+
+/*فرم */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #00000099;
+    letter-spacing: 0.5px;
+}
+
+/*input های ردیف اول و دوم */
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    border: 1px solid #0000001A;
+    border-radius: 16px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 200px;
+    padding: 16px 20px;
+    border: 1px solid #0000001A;
+    border-radius: 16px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #ffffff;
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #00000099;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* select */
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("../images/drawer.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    /* pointer-events: none; */
+    /* opacity: 0.7; */
+}
+
+.submit-btn {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    max-width: 180px;
+    height: 64px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.submit-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* بخش Check out the delicious recipe*/
+.new-recipes-section .new-recipes-header {
+    display: block;
+    text-align: center;
+}
+
+.new-recipes-section .new-recipes-title h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .contact-image img {
+        max-width: 100%;
+        width: 100%;
+        max-height: 400px;
+        min-height: 250px;
+    }
+
+    .contact-form-wrapper {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .submit-btn {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-row .form-group {
+        min-width: 100%;
+    }
+
+    .contact-image img {
+        width: 100%;
+        height: 280px;
+        object-fit: contain;
+        background-color: #E7F9FD;
+        border-radius: 20px;
+    }
+
+    .submit-btn {
+        height: 56px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .contact-image img {
+        width: 100%;
+        height: 240px;
+        object-fit: contain;
+        background-color: #E7F9FD;
+        border-radius: 16px;
+    }
+
+    .form-group input,
+    .form-group select {
+        height: 50px;
+        font-size: 13px;
+        padding: 0 16px;
+    }
+
+    .form-group textarea {
+        height: 150px;
+        min-height: 100px;
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        height: 50px;
+        font-size: 14px;
+    }
+}

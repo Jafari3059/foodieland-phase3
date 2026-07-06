@@ -1,0 +1,915 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* main container */
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* header-navigation (مشترک) */
+header {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 45px max(20px, 5%);
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 9998;
+}
+
+.logo {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 20px;
+    width: 110px;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 5vw, 50px);
+    flex: 1;
+    min-width: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.social-icons {
+    width: 120px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* پنهان کردن دکمه همبرگری در دسکتاپ */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* پنهان کردن آیکون‌های اجتماعیِ درون منو در دسکتاپ*/
+.nav-social {
+    display: none !important;
+}
+
+/* نمایش آیکون‌های اجتماعی در دسکتاپ */
+.social-icons.main-social {
+    display: flex;
+    gap: 15px;
+}
+
+/* buttons (مشترک) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #000000;
+    width: 156px;
+    height: 45px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(41, 70, 97, 0.1);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.btn-blue {
+    background-color: #0000000D;
+    color: #00000099;
+    width: 139px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+}
+
+.btn-blue img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.btn-black {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    max-width: 200px;
+    height: 60px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 8px;
+    padding: 0 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-quote {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    min-height: 60px;
+    padding: 15px 20px;
+    margin: 0;
+    font-weight: 600;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.btn-view-all {
+    background-color: #E7FAFE;
+    color: #000000;
+    width: 100%;
+    max-width: 200px;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    max-width: 229px;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* چیدمان دو ستونی */
+.blog-layout {
+    display: flex;
+    gap: clamp(30px, 5vw, 50px);
+    margin: 80px 0;
+    flex-wrap: wrap;
+}
+
+/* ستون چپ - مقالات */
+.blog-posts-column {
+    flex: 2;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 0px;
+}
+
+.blog-post-card {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.blog-post-img {
+    width: 100%;
+    max-width: 290px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.blog-post-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.blog-post-info h3 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.blog-post-info p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.blog-post-meta {
+    display: flex;
+    gap: clamp(20px, 4vw, 50px);
+    color: #888;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+/* بخش پایین هر مقاله (آواتار + نویسنده + تاریخ) */
+.blog-post-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.blog-author-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.author-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+}
+
+.blog-author {
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    margin-right: 0;
+}
+
+.blog-author::after {
+    content: "|";
+    margin-left: 8px;
+    margin-right: 8px;
+    color: #ccc;
+}
+
+.blog-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000099;
+}
+
+/* ستون راست */
+.blog-sidebar {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* باکس Tasty Recipes  */
+.tasty-recipes-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 80px;
+}
+
+.tasty-recipes-header h3 {
+    font-size: clamp(28px, 3vw, 32px);
+    font-weight: 600;
+    margin-bottom: 32px;
+    padding-bottom: 10px;
+}
+
+.tasty-recipes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tasty-recipe-item {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tasty-recipe-img {
+    width: 100%;
+    max-width: 180px;
+    height: 120px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.tasty-recipe-info h4 {
+    font-size: clamp(18px, 1.5vw, 20px);
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.tasty-recipe-info p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000099;
+}
+
+/*پوستر تبلیغاتی*/
+.poster-banner {
+    display: block;
+    background: #ffffff;
+    border-radius: 0px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.poster-banner-img {
+    width: 100%;
+    max-width: 400px;
+    height: 434px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.poster-banner-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.poster-banner-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.poster-banner-content p {
+    font-size: 12px;
+    color: #f4a261;
+    font-weight: 500;
+}
+
+/* New Recipe Section - Shared */
+.new-recipes-section {
+    margin: 80px 0;
+    width: 100%;
+}
+
+.new-recipes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(20px, 5vw, 50px);
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.new-recipes-title {
+    flex: 1;
+    min-width: 250px;
+}
+
+.new-recipes-title h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.new-recipes-description {
+    flex: 1;
+    min-width: 250px;
+    margin-top: 35px;
+}
+
+.new-recipes-description p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.new-recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.new-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 290px;
+    min-height: 316px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+.new-card-img {
+    width: 100%;
+    max-width: 290px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.new-card-info {
+    padding: 18px 15px 25px 15px;
+}
+
+.new-card-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.35;
+    color: #1a1a1a;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 52px;
+}
+
+.new-card-meta {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 3vw, 30px);
+    color: #00000099;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.new-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.new-card-meta img {
+    width: 24px;
+    height: 24px;
+}
+
+/* لایک (قلب) داخل کارت‌های جدید */
+.new-card .like-container {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.new-card .heart-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+.new-card .heart-filled {
+    display: none;
+}
+
+.new-card .heart-empty {
+    display: block;
+}
+
+/* footer section (مشترک) */
+.newsletter-section {
+    background-color: #E7F9FD;
+    border-radius: 60px;
+    padding: clamp(60px, 10vw, 120px) clamp(20px, 6vw, 80px);
+    margin: clamp(80px, 12vw, 160px) 0;
+    height: auto;
+    min-height: 442px;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    background-image: url('../images/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543\ 1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.newsletter-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-image: url('../images/Photo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.newsletter-content {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-35px);
+}
+
+.newsletter-content h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.newsletter-content p {
+    color: #00000099;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 auto 64px auto;
+    max-width: 700px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.newsletter-section {
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    height: 80px;
+    margin: 64px auto 0 auto;
+    position: relative;
+}
+
+.newsletter-input {
+    width: 100%;
+    height: 80px;
+    padding: 0 180px 0 25px;
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.newsletter-input::placeholder {
+    color: #00000066;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.newsletter-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: white;
+    width: 160px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 48px 0 48px 0;
+    border-bottom: 1px solid #eaeaea;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    height: 22px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    color: #00000099;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+.footer-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    min-width: 200px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: clamp(30px, 6vw, 60px);
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0 50px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.footer-bottom p {
+    color: #00000099;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-bottom .highlight {
+    color: #ff4757;
+    font-weight: 400;
+}
+
+.footer-social {
+    display: flex;
+    gap: 40px;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.footer-social img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid #E7FAFE;
+    border-top: 3px solid #000000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 24px auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.error-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .blog-post-card {
+        flex-direction: column;
+    }
+
+    .blog-post-img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .tasty-recipe-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tasty-recipe-img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        max-width: 100%;
+    }
+
+    .newsletter-input {
+        padding: 0 20px;
+        height: 60px;
+        width: 100%;
+    }
+
+    .newsletter-btn {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: 60px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-nav {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-social {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .btn-black,
+    .btn-view-all,
+    .btn-instagram,
+    .btn-quote {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .new-recipes-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,630 @@
+/* بخش عنوان */
+.recipe-header {
+    text-align: left;
+    margin: clamp(40px, 8vw, 80px) 0 clamp(24px, 5vw, 46px) 0;
+    padding: 0 20px;
+}
+
+.recipe-header h1 {
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 600;
+    margin-bottom: clamp(24px, 5vw, 48px);
+}
+
+/*  بخش زمان + نویسنده + دکمه‌ها  */
+.recipe-info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(20px, 4vw, 50px);
+    background: #ffffff;
+    padding: clamp(15px, 2vw, 20px) clamp(20px, 3vw, 30px);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin: 0 20px 50px 20px;
+}
+
+.recipe-actions {
+    display: flex;
+    gap: clamp(16px, 3vw, 32px);
+    margin-left: auto;
+}
+
+.recipe-author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.recipe-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000099;
+    margin: 0;
+}
+
+/* اطلاعات غذایی */
+.info-items {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 3vw, 20px);
+    flex-wrap: wrap;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.info-item div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.info-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000099;
+    text-align: left;
+}
+
+/* خط جداکننده بین آیتم‌های اطلاعات غذایی */
+.info-item-separator {
+    width: 1px;
+    height: 40px;
+    background-color: #e0e0e0;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* خط جداکننده اصلی بین نویسنده و اطلاعات */
+.info-separator {
+    width: 1px;
+    height: 40px;
+    background-color: #e0e0e0;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* دکمه‌های دایره‌ای */
+.recipe-actions {
+    display: flex;
+    gap: clamp(16px, 3vw, 32px);
+}
+
+.action-circle {
+    width: clamp(56px, 6vw, 80px);
+    height: clamp(56px, 6vw, 80px);
+    border-radius: 50%;
+    border: none;
+    background-color: #E7FAFE;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.action-circle img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Nutrition Information */
+.nutrition-wrapper {
+    display: flex;
+    gap: clamp(20px, 5vw, 50px);
+    align-items: stretch;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.nutrition-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.nutrition-image img {
+    height: auto;
+    min-height: 300px;
+    max-height: 600px;
+    width: 100%;
+    max-width: 840px;
+    border-radius: 30px;
+    display: block;
+    object-fit: cover;
+}
+
+.nutrition-box {
+    flex: 1;
+    min-width: 280px;
+    height: auto;
+    min-height: 600px;
+    max-width: 400px;
+    background: #E7FAFE;
+    border-radius: 30px;
+    padding: clamp(20px, 3vw, 30px);
+}
+
+.nutrition-content h2 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* Nutrition-دو ستون */
+.nutrition-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 150px;
+}
+
+.nutrition-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #0000001A;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nutrition-label {
+    font-size: 14px;
+    color: #00000099;
+}
+
+.nutrition-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.nutrition-grid.loaded .spinner {
+    display: none;
+}
+
+.nutrition-grid:not(.loaded) .nutrition-row {
+    visibility: hidden;
+}
+
+/* متن پایین باکس */
+.nutrition-footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #00000099;
+    padding: clamp(60px, 12vw, 140px) 0 32px;
+    text-align: center;
+}
+
+/* توضیحات اضافی */
+.recipe-description {
+    margin-top: clamp(40px, 8vw, 80px);
+    padding: 0 20px;
+}
+
+.recipe-description p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #00000099;
+    font-weight: 400;
+    text-align: justify;
+}
+
+/* Ingredients + Directions + Tasty Recipes */
+.recipe-two-columns {
+    display: flex;
+    gap: clamp(30px, 6vw, 80px);
+    margin: clamp(80px, 15vw, 160px) 0;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.left-column {
+    flex: 2;
+    min-width: 280px;
+}
+
+.tasty-column-recipe {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Ingredients */
+.ingredients-box h2 {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    margin-bottom: clamp(24px, 5vw, 48px);
+}
+
+/* حذف خط بین دسته‌بندی Ingredients */
+.ingredient-category {
+    border-bottom: none !important;
+}
+
+.ingredient-category:not(:last-child) {
+    border-bottom: none !important;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.ingredient-category h3 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* آیتم‌ها - همه خط دارند */
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: clamp(20px, 3vw, 33px) 0;
+    font-size: clamp(16px, 1.2vw, 18px);
+    font-weight: 400;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 1px solid #DBE2E5;
+    transition: all 0.3s ease;
+}
+
+/* چک‌باکس دایره‌ای */
+.ingredient-item input {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid #DBE2E5;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    flex-shrink: 0;
+}
+
+/* وقتی چک‌باکس تیک خورد - رنگ پس‌زمینه */
+.ingredient-item input:checked {
+    background-color: #000;
+    border-color: #000;
+    position: relative;
+}
+
+.ingredient-item input:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* خط زدن متن و تغییر رنگ وقتی تیک خورد */
+.ingredient-item input:checked {
+    background-color: #000;
+    border-color: #000;
+}
+
+/* خط زدن خود متن */
+.ingredient-item:has(input:checked) {
+    text-decoration: line-through;
+    color: #00000024;
+}
+
+/* Directions */
+.directions-section-full {
+    margin-top: clamp(80px, 15vw, 180px);
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.directions-section-full h2 {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.directions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.direction-item {
+    border-bottom: 1px solid #0000001A;
+    padding-bottom: 48px;
+}
+
+.direction-item:last-child {
+    border-bottom: 1px solid #0000001A;
+    padding-bottom: 48px;
+}
+
+.direction-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.step-number {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    color: #000;
+}
+
+.direction-header h3 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    color: #000;
+    flex: 1;
+}
+
+.direction-description {
+    margin-left: clamp(30px, 5vw, 54px);
+}
+
+.direction-description p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #00000099;
+}
+
+.direction-image {
+    margin-left: clamp(20px, 4vw, 42px);
+    margin-top: 48px;
+    width: calc(100% - clamp(20px, 4vw, 42px));
+}
+
+.direction-image img {
+    width: 100%;
+    max-width: 792px;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+/* متن زیر عکس */
+.image-caption {
+    font-size: 16px;
+    font-weight: 400;
+    color: #00000099;
+    line-height: 1.5;
+    margin-top: 48px;
+    text-align: left;
+}
+
+.direction-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #DBE2E5;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    background-color: transparent;
+    margin-top: 7px;
+    margin-right: 16px;
+}
+
+.direction-checkbox:checked {
+    background-color: #000;
+    border-color: #000;
+    position: relative;
+}
+
+.direction-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background-image: url('../images/check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* تنظیمات مخصوص صفحه جزئیات برای بخش پیشنهادات */
+.recipe-suggestions {
+    margin-top: clamp(80px, 15vw, 160px);
+    margin-bottom: clamp(80px, 15vw, 160px);
+    padding: 0 20px;
+}
+
+.recipe-suggestions .new-recipes-header {
+    margin-bottom: clamp(40px, 8vw, 80px);
+}
+
+.recipe-suggestions .new-recipes-title h2 {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* فقط تعداد ستون رو کنترل میکنه (بقیه از main.css میاد) */
+.recipe-suggestions .new-recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 992px) {
+    .nutrition-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nutrition-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .nutrition-image img {
+        max-height: 400px;
+        min-height: 200px;
+        width: 100%;
+    }
+
+    .nutrition-box {
+        max-width: 100%;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .recipe-two-columns {
+        flex-direction: column;
+    }
+
+    .tasty-column-recipe {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-info-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .recipe-actions {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .info-items {
+        justify-content: center;
+    }
+
+    .info-item-separator {
+        display: none;
+    }
+
+    .info-separator {
+        display: none;
+    }
+
+    .recipe-author-info {
+        justify-content: center;
+    }
+
+    .nutrition-footer-text {
+        padding: 40px 0 20px;
+    }
+
+    .direction-image {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .direction-description {
+        margin-left: 0;
+    }
+
+    .direction-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .direction-checkbox {
+        margin-top: 0;
+        margin-right: 0;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-header h1 {
+        font-size: 28px;
+    }
+
+    .action-circle {
+        width: 48px;
+        height: 48px;
+    }
+
+    .action-circle img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nutrition-image img {
+        max-height: 250px;
+        min-height: 150px;
+        border-radius: 16px;
+    }
+
+    .nutrition-box {
+        min-height: 300px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .ingredient-item {
+        padding: 15px 0;
+        font-size: 15px;
+    }
+
+    .direction-item {
+        padding-bottom: 30px;
+    }
+
+    .directions-list {
+        gap: 30px;
+    }
+}

@@ -1,0 +1,555 @@
+/* بخش عنوان */
+.blog-header {
+    text-align:center;
+    margin: clamp(40px, 8vw, 80px) 0 clamp(24px, 5vw, 46px) 0;
+    padding: 0 20px;
+}
+
+.blog-header h1 {
+    font-size: clamp(32px, 4vw, 54px);
+    font-weight: 600;
+    margin-bottom: 32px;
+    line-height: 1.2;
+}
+
+/* بخش اطلاعات */
+.blog-info-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(16px, 3vw, 24px);
+    background: #ffffff;
+    padding: clamp(15px, 2vw, 20px) clamp(20px, 3vw, 30px);
+    border-radius: 20px;
+    margin-bottom: 48px;
+    margin: 0 20px 48px 20px;
+}
+
+.blog-author-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: clamp(20px, 6vw, 85px);
+}
+
+.author-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    display: block;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.info-separator {
+    width: 1px;
+    height: 40px;
+    background-color: #0000001A;
+    display: inline-block;
+}
+
+.blog-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000099;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.blog-description {
+    margin-bottom: clamp(40px, 8vw, 73px);
+    padding: 0 20px;
+}
+
+.blog-description p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #00000099;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* تصویر اصلی */
+.blog-hero-wrapper {
+    margin-bottom: clamp(40px, 8vw, 71px);
+    padding: 0 20px;
+}
+
+.blog-hero-image img {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    max-height: 600px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.blog-stats {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 3vw, 30px);
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.stat-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000099;
+}
+
+.blog-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.action-circle {
+    width: clamp(48px, 6vw, 60px);
+    height: clamp(48px, 6vw, 60px);
+    border-radius: 50%;
+    border: none;
+    background-color: #E7FAFE;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.action-circle img {
+    width: 24px;
+    height: 24px;
+}
+
+/* چیدمان دو ستون */
+.blog-two-columns {
+    display: flex;
+    gap: clamp(20px, 5vw, 49px);
+    margin: clamp(40px, 8vw, 69px) 0 80px;
+    flex-wrap: wrap;
+}
+
+.blog-content-column {
+    flex: 2;
+    min-width: 280px;
+    margin-left: clamp(20px, 5vw, 69px);
+    padding-right: 20px;
+}
+
+.blog-sidebar-column {
+    flex: 1;
+    min-width: 250px;
+    margin-right: clamp(20px, 5vw, 80px);
+}
+
+.blog-question {
+    margin-bottom: clamp(60px, 10vw, 112px);
+}
+
+.blog-question h2 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #000000;
+}
+
+.blog-question img {
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-question p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #00000099;
+    margin-bottom: 16px;
+}
+
+/* نقل قول */
+.blog-quote-block {
+    margin: 48px auto;
+    padding: clamp(24px, 4vw, 40px);
+    width: 100%;
+    height: auto;
+    min-height: 224px;
+    background: linear-gradient(to right, #dbdbdb6f, #ffffff);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0000001A #ffffff #0000001A #0000001A;
+}
+
+.blog-quote-block blockquote {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 500;
+    font-style: italic;
+    color: #000000;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ستون راست سایدبار */
+.blog-sidebar-column {
+    flex: 1;
+}
+
+.blog-sidebar-column .blog-share-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    background: transparent; /* حذف پس‌زمینه */
+}
+
+.blog-sidebar-column .share-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.blog-sidebar-column .share-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+}
+
+.blog-sidebar-column .share-icons img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* override کردن استایل هدر برای صفحه بلاگ پست */
+.new-recipes-section .new-recipes-header {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.new-recipes-section .new-recipes-title {
+    flex: none;
+    width: 100%;
+}
+
+.new-recipes-section .new-recipes-title h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*اسلایدر افقی */
+.carousel-section {
+    margin: clamp(40px, 8vw, 80px) 0;
+    padding: 0 20px;
+}
+
+.carousel-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carousel-header h2 {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.carousel-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* کارت‌های اسلایدر */
+.carousel-track .new-card {
+    flex: 0 0 calc(25% - 19px);
+    min-width: 200px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-track .new-card-img {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.carousel-track .new-card-info {
+    padding: 18px 15px 25px 15px;
+}
+
+.carousel-track .new-card-info h3 {
+    font-size: clamp(16px, 1.2vw, 18px);
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.35;
+    min-height: 48px;
+}
+
+.carousel-track .new-card-meta {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 2vw, 30px);
+    color: #00000099;
+    font-size: 14px;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+.carousel-track .new-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.carousel-track .new-card-meta img {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-btn {
+    width: clamp(36px, 4vw, 42px);
+    height: clamp(36px, 4vw, 42px);
+    border-radius: 50%;
+    background-color: #E7FAFE;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-btn img {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .carousel-track .new-card {
+        flex: 0 0 calc(33.333% - 17px);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .blog-two-columns {
+        flex-direction: column;
+    }
+
+    .blog-content-column {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-right: 0;
+    }
+
+    .blog-sidebar-column {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .blog-sidebar-column .share-icons {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .carousel-track .new-card {
+        flex: 0 0 calc(50% - 13px);
+    }
+    
+}
+@media (max-width: 768px) {
+
+  .blog-info-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .blog-author-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .author-name,
+    .blog-date {
+        text-align: center;
+    }
+
+    .info-separator {
+        display: none;
+    }
+
+    .blog-hero-image img {
+        width: 100% !important;
+        border-radius: 16px;
+    }
+
+    .blog-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .blog-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .blog-content-column {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .blog-sidebar-column {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .blog-quote-block blockquote {
+        font-size: 20px;
+    }
+
+    .carousel-track .new-card {
+        flex: 0 0 calc(100% - 0px);
+    }
+
+    .carousel-section {
+        padding: 0 0px;
+    }
+
+    .carousel-container {
+        gap: 6px;
+    }
+
+    .carousel-wrapper {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .carousel-track .new-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: 100%;
+        margin: 0;
+    }
+
+    .carousel-track .new-card-img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .carousel-btn {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        z-index: 5;
+    }
+
+    .carousel-btn img {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .blog-header h1 {
+        font-size: 28px;
+    }
+
+    .blog-hero-image img {
+        min-height: 150px;
+        max-height: 300px;
+        border-radius: 16px;
+    }
+
+    .blog-quote-block {
+        padding: 20px;
+        min-height: 150px;
+    }
+
+    .blog-quote-block blockquote {
+        font-size: 18px;
+    }
+
+    .action-circle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .action-circle img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.carousel-track .new-card {
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+}
+
+.carousel-track .new-card-img {
+    max-width: 100%;
+}

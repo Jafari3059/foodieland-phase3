@@ -1,0 +1,328 @@
+.blog-header-section {
+    text-align: center;
+    margin: clamp(40px, 8vw, 80px) 0 clamp(30px, 6vw, 60px) 0;
+    padding: 0 20px;
+}
+
+.blog-header-content h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.blog-header-content p {
+    color: #00000099;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 auto clamp(40px, 8vw, 80px) auto;
+    line-height: 1.6;
+    max-width: 700px;
+    padding: 0 10px;
+}
+
+/* بخش جستجو (باکس سفید + دکمه مشکی)  */
+.blog-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    margin: 24px auto 80px auto;
+    position: relative;
+    padding: 0 10px;
+}
+
+.blog-search input {
+    width: 100%;
+    height: 80px;
+    padding: 0 180px 0 25px;
+    border: 1px solid #0000001A;
+    border-radius: 24px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: white;
+    outline: none;
+    transition: all 0.3s ease;
+    /*box-shadow: 0 2px 10px rgba(0,0,0,0.05);*/
+    box-sizing: border-box;
+}
+
+.blog-search input::placeholder {
+    color: #00000066;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blog-search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: white;
+    width: 160px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* چیدمان دو ستونی */
+.blog-layout {
+    display: flex;
+    gap: clamp(20px, 5vw, 50px);
+    margin: clamp(40px, 8vw, 80px) 0;
+    flex-wrap: wrap;
+}
+
+/* ستون چپ - مقالات */
+.blog-posts-column {
+    flex: 2;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 0px;
+}
+
+.blog-post-card {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.blog-post-img {
+    width: 100%;
+    max-width: 290px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.blog-post-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.blog-post-info h3 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-top: 14px;
+}
+
+.blog-post-info p {
+    color: #00000099;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+/* بخش پایین هر مقاله (آواتار + نویسنده + تاریخ) */
+.blog-post-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 35px;
+    margin-left: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-author-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.author-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    flex-shrink: 0;
+}
+
+.blog-author {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+    margin-right: 0;
+}
+
+.blog-author::after {
+    content: none;
+}
+
+/* خط جداکننده عمودی بین نویسنده و تاریخ */
+.author-date-separator {
+    width: 1px;
+    height: 30px;
+    background-color: #0000001A;
+    display: block;
+    flex-shrink: 0;
+    margin: 0 10px;
+}
+
+.blog-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000099;
+}
+
+/* ستون راست */
+.blog-sidebar {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 2vw, 16px);
+    margin: clamp(40px, 8vw, 80px) 0 clamp(50px, 8vw, 90px) 0;
+    flex-wrap: wrap;
+    position: relative;
+    top: -30px;
+    padding: 0 10px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(50px, 6vw, 64px);
+    height: clamp(50px, 6vw, 64px);
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: clamp(14px, 1.2vw, 15px);
+    font-weight: 700;
+    color: #666;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.page.active {
+    background-color: #000;
+    color: white;
+}
+
+.page-dots {
+    color: #aaa;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.page.next {
+    width: auto;
+    padding: 0 20px;
+    gap: 8px;
+}
+
+
+@media (max-width: 992px) {
+
+    .blog-search {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .blog-search input {
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .blog-search-btn {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: 60px;
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .blog-posts-column {
+        min-height: 1550px;
+        position: relative;
+    }
+
+    .blog-posts-column .pagination {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        top: auto;
+    }
+
+    .blog-sidebar {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .blog-header-content h1 {
+        font-size: 28px;
+    }
+
+    .blog-search input {
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .blog-search-btn {
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .page {
+        width: 44px;
+        height: 44px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .page.next {
+        padding: 0 15px;
+        width: auto;
+    }
+
+    .author-date-separator {
+        display: none;
+    }
+
+    .blog-author::after {
+        content: "|";
+        margin-left: 8px;
+        margin-right: 8px;
+        color: #ccc;
+    }
+}
